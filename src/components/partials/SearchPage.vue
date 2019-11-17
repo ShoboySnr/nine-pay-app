@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <v-card raised class="pa-10 mt-10 mb-0">
       <v-row class="mt-5">
         <v-col
         col-12
@@ -21,7 +22,7 @@
           <v-col class="d-flex" cols="12" sm="3">
             <v-select
               :items="sortBy"
-              label="Sort By"
+              label="Sort Alphabetically By"
               outlined
               color="success"
               v-model="sortByValue"
@@ -49,8 +50,8 @@
             ></v-select>
           </v-col>
         </v-row>
-
       </v-form>
+    </v-card>
   </v-container>
 </template>
 

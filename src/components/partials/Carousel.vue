@@ -10,8 +10,7 @@
       v-for="(item,index) in carouselItems"
       :key="index"
       :src="item.src"
-      reverse-transition="fade-transition"
-      transition="fade-transition"
+      transition="slide-x-reverse-transition"
       :href="item.path"
     >
       <v-row

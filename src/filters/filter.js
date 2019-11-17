@@ -13,8 +13,8 @@ Vue.filter('returnPrice', function(value) {
 });
 
 Vue.filter('readMore', function(value) {
-  if (value.length <= 31) return value;
-  return `${value.substr(0, 31)}...`;
+  if (value.length <= 28) return value;
+  return `${value.substr(0, 28)}...`;
 });
 
 Vue.filter('toPercentage', function(first_value, second_value) {

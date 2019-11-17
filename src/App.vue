@@ -9,7 +9,11 @@
         >
         <v-container class="d-flex pe-2 mt-15 mb-15">
           <v-toolbar  color="success" dark flat class="white-text" app>
-            <v-toolbar-title>{{ title }}</v-toolbar-title>
+            <v-toolbar-title>
+              <v-link to="/" light flat class="logo">
+                {{ title }}
+              </v-link>
+            </v-toolbar-title>
 
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-sm-and-down white--text">
@@ -20,7 +24,7 @@
             class="text-capitalize white--text"
             flat
               >
-              <v-icon> {{item.icon}} </v-icon>
+              <v-icon class="pr-2"> {{item.icon}} </v-icon>
               {{ item.title }}
               {{ item.title == 'Cart' ? `(${cartsCount})` : '' }}
               {{ item.title == 'Favorites' ? `(${favsCount})` : '' }}
@@ -77,9 +81,20 @@
   </v-app>
 </template>
 
+<style>
+.logo {
+  font-size: 3.7rem;
+}
+
+body {
+  font-family: Brown;
+}
+</style>
+
 <script>
 import { mapGetters } from 'vuex';
 import { footerItems, menuItems } from './data/data';
+import './assets/styles/main.css';
 
 export default {
   name: 'App',

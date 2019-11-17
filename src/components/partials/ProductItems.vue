@@ -1,6 +1,7 @@
 <template>
   <v-container class="mt-10">
-    <p class="display-3">{{productType}} </p>
+  <v-card raised class="pa-10 mb-10">
+    <p class="display-2 font-weight-bold">{{productType}} </p>
     <v-row v-if="products.length  === 0">
       <v-col cols="12" class="d-flex justify-center" height="40">
         <p class="red--text display-1"><v-icon x-large class="red--text">mdi-delete-empty</v-icon>
@@ -87,6 +88,7 @@
       </v-flex>
       </v-col>
     </v-row>
+  </v-card>
   </v-container>
 </template>
 
@@ -142,6 +144,13 @@ export default {
         products: 'green',
       },
       isLoading: this.$store.state.isLoading,
+      circle: false,
+      disabled: false,
+      length: 10,
+      nextIcon: 'mdi-arrow-right',
+      prevIcon: 'mdi-arrow-left',
+      page: 1,
+      totalVisible: 10,
     }
   },
   methods: {
