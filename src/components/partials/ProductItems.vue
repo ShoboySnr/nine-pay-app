@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-10">
+  <v-container class="mt-10">
     <p class="title">{{productType}} </p>
     <v-row v-if="products.length  === 0">
       <v-col cols="12" class="d-flex justify-center" height="40">
@@ -74,7 +74,7 @@
       </v-flex>
       </v-col>
     </v-row>
-  </div>
+  </v-container>
 </template>
 
 <style scoped>

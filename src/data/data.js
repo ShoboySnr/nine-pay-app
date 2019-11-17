@@ -91,3 +91,102 @@ export const products = [
       price: 1130000
     },
 ];
+
+
+export const footerItems = {
+  "Let us Help You": [
+    {
+      title: 'Help Center',
+      path: '',
+    },
+    {
+      title: 'FAQ',
+      path: '',
+    },
+    {
+      title: 'How to Shop',
+      path: '',
+    },
+    {
+      title: 'Delivery Option & Timelines',
+      path: '',
+    },
+    {
+      title: 'Coperate & Bulk Purchases',
+      path: ''
+    }
+  ],
+  "About 9Pay": [
+    {
+      title: 'About us',
+      path: '',
+    },
+    {
+      title: 'Terms & Conditions',
+      path: '',
+    },
+    {
+      title: 'Privacy & Policy',
+      path: '',
+    },
+    {
+      title: 'Careers',
+      path: '',
+    },
+    {
+      title: 'Express',
+      path: ''
+    }
+  ],
+  "Make Money With 9Pay": [
+    {
+      title: 'Sell on 9Pay',
+      path: '',
+    },
+    {
+      title: 'Become an Affiliate Partner',
+      path: '',
+    },
+    {
+      title: 'Become a Sales Consultant',
+      path: '',
+    },
+    {
+      title: 'Become a Vendor Service Provider',
+      path: '',
+    },
+    {
+      title: 'Become a Logistics Service Partner',
+      path: ''
+    }
+  ]
+}
+
+
+export const menuItems = [
+  {
+    title: 'Login',
+    path: '/login',
+    icon: 'mdi-login-variant'
+  },
+  {
+    title: 'Need Help?',
+    path: '/contact',
+    icon: 'mdi-face-agent'
+  },
+  {
+    title: 'Cart',
+    path: '/cart',
+    icon: 'mdi-cart'
+  },
+  {
+    title: 'Favorites',
+    path: '/favorites',
+    icon: 'mdi-heart'
+  },
+  {
+    title: 'Checkout',
+    path: '/checkout',
+    icon: 'mdi-credit-card'
+  }
+]

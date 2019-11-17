@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app white>
     <div>
       <v-app-bar
           color="success accent-4"
@@ -13,7 +13,7 @@
           <v-spacer></v-spacer>
 
           <v-btn text
-          v-for="item in items"
+          v-for="item in menuItems"
           :key="item.title"
           :to="item.path"
           class="text-capitalize"
@@ -28,9 +28,8 @@
     </div>
 
     <v-content>
-      <v-container class="pt-10 pb-10">
+     
         <router-view></router-view>
-      </v-container>
     </v-content>
 
      <v-footer class="justify-center d-flex black white--text">
@@ -61,6 +60,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import { footerItems, menuItems } from './data/data';
 
 export default {
   name: 'App',
@@ -71,99 +71,8 @@ export default {
   data () {
     return {
       fixed: false,
-      items: [{
-        title: 'Login',
-        path: '/login',
-        icon: 'mdi-login-variant'
-      },
-      {
-        title: 'Need Help?',
-        path: '/contact',
-        icon: 'mdi-face-agent'
-      },
-      {
-        title: 'Cart',
-        path: '/cart',
-        icon: 'mdi-cart'
-      },
-      {
-        title: 'Favorites',
-        path: '/favorites',
-        icon: 'mdi-heart'
-      },
-      {
-        title: 'Checkout',
-        path: '/checkout',
-        icon: 'mdi-credit-card'
-      }],
-      footerItems: {
-        "Let us Help You": [
-          {
-            title: 'Help Center',
-            path: '',
-          },
-          {
-            title: 'FAQ',
-            path: '',
-          },
-          {
-            title: 'How to Shop',
-            path: '',
-          },
-          {
-            title: 'Delivery Option & Timelines',
-            path: '',
-          },
-          {
-            title: 'Coperate & Bulk Purchases',
-            path: ''
-          }
-        ],
-        "About 9Pay": [
-          {
-            title: 'About us',
-            path: '',
-          },
-          {
-            title: 'Terms & Conditions',
-            path: '',
-          },
-          {
-            title: 'Privacy & Policy',
-            path: '',
-          },
-          {
-            title: 'Careers',
-            path: '',
-          },
-          {
-            title: 'Express',
-            path: ''
-          }
-        ],
-        "Make Money With 9Pay": [
-          {
-            title: 'Sell on 9Pay',
-            path: '',
-          },
-          {
-            title: 'Become an Affiliate Partner',
-            path: '',
-          },
-          {
-            title: 'Become a Sales Consultant',
-            path: '',
-          },
-          {
-            title: 'Become a Vendor Service Provider',
-            path: '',
-          },
-          {
-            title: 'Become a Logistics Service Partner',
-            path: ''
-          }
-        ]
-      },
+      menuItems,
+      footerItems,
       title: '9Pay'
     }
   },

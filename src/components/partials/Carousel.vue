@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="fluid">
+  <v-container fluid class="pa-0">
     <v-carousel
       v-model="model"
       :show-arrows="showArrows"

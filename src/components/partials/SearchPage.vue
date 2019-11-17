@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <v-container>
+  <v-container>
       <v-row class="mt-5">
         <v-col
         col-12
@@ -48,8 +47,7 @@
         </v-row>
 
       </v-form>
-    </v-container>
-  </div>
+  </v-container>
 </template>
 
 <script>
