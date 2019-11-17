@@ -33,8 +33,28 @@
       </v-container>
     </v-content>
 
-     <v-footer class="justify-center d-flex">
-      <span>&copy; 9Pay Merchant Shop 2019</span>
+     <v-footer class="justify-center d-flex black white--text">
+       <v-container class="pt-10 pb-10">
+         <v-row>
+           <v-col
+            cols="12"
+            md="4"
+            sm="4"
+            v-for="(items) in footerItems"
+            :key="items"
+            class="pb-10"
+          >
+            <div v-for='(item) in items' :key="item">
+              <p class="display-1"> {{ items[title] }} </p>
+              <v-btn :ripple=false text class="subtitle-2 white--text text-capitalize" :to="item.path"> {{ item.title }} </v-btn>
+            </div>
+           </v-col>
+         </v-row>
+
+         <div class="text-center">
+          <span>&copy; 9Pay Merchant Shop 2019</span>
+         </div>
+       </v-container>
     </v-footer>
   </v-app>
 </template>
@@ -76,6 +96,74 @@ export default {
         path: '/checkout',
         icon: 'mdi-credit-card'
       }],
+      footerItems: {
+        "Let us Help You": [
+          {
+            title: 'Help Center',
+            path: '',
+          },
+          {
+            title: 'FAQ',
+            path: '',
+          },
+          {
+            title: 'How to Shop',
+            path: '',
+          },
+          {
+            title: 'Delivery Option & Timelines',
+            path: '',
+          },
+          {
+            title: 'Coperate & Bulk Purchases',
+            path: ''
+          }
+        ],
+        "About 9Pay": [
+          {
+            title: 'About us',
+            path: '',
+          },
+          {
+            title: 'Terms & Conditions',
+            path: '',
+          },
+          {
+            title: 'Privacy & Policy',
+            path: '',
+          },
+          {
+            title: 'Careers',
+            path: '',
+          },
+          {
+            title: 'Express',
+            path: ''
+          }
+        ],
+        "Make Money With 9Pay": [
+          {
+            title: 'Sell on 9Pay',
+            path: '',
+          },
+          {
+            title: 'Become an Affiliate Partner',
+            path: '',
+          },
+          {
+            title: 'Become a Sales Consultant',
+            path: '',
+          },
+          {
+            title: 'Become a Vendor Service Provider',
+            path: '',
+          },
+          {
+            title: 'Become a Logistics Service Partner',
+            path: ''
+          }
+        ]
+      },
       title: '9Pay'
     }
   },
