@@ -1,94 +1,180 @@
+/* eslint-disable no-undef */
 export const products = [
     {
       id: '1',
       title: 'O\'Cash Financial Services Enterprise',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/61/904663/1.jpg?1046',
       product_category: ['services', 'products'],
-      price: 450000
+      price: 450000,
+      cost_price: 130000
     },
     {
       id: '2',
       title: 'Catenin95',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/80/063942/1.jpg?9537',
       product_category: ['services'],
-      price: 3100000
+      price: 3100000,
+      cost_price: 124000
     },
     {
       id: '3',
       title: 'TEGASI Enterprises',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/40/729153/1.jpg?4088',
       product_category: [ 'products'],
-      price: 2400000
+      price: 2400000,
+      cost_price: 250000
     },
     {
       id: '4',
       title: 'Facebook Wealth Formular',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/16/433524/1.jpg?8307',
       product_category: ['services', 'products'],
-      price: 1050000
+      price: 1050000,
+      cost_price: 120000
     },
     {
       id: '5',
       title: 'O\'Cash Financial Services Enterprise',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/143003/1.jpg?3685',
       product_category: ['services'],
-      price: 230000
+      price: 230000,
+      cost_price: 120000
     },
     {
       id: '6',
       title: 'Catenin95',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/95/586842/1.jpg?5445',
       product_category: ['services', 'products'],
-      price: 440000
+      price: 440000,
+      cost_price: 245000
     },
     {
       id: '7',
       title: 'TEGASI Enterprises',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/035411/1.jpg?5075',
       product_category: ['services', 'products'],
-      price: 405000
+      price: 405000,
+      cost_price: 400000
     },
     {
       id: '8',
       title: 'Facebook Wealth Formular',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/35/419492/1.jpg?0721',
       product_category: ['products'],
-      price: 405000
+      price: 405000,
+      cost_price: 320000
     },
     {
       id: '9',
       title: 'O\'Cash Financial Services Enterprise',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/002423/1.jpg?4794',
       product_category: ['services', 'products'],
-      price: 235000
+      price: 235000,
+      cost_price: 200000
     },
     {
       id: '10',
       title: 'Catenin95',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/92/389122/1.jpg?0567',
       product_category: ['services'],
-      price: 1230000
+      price: 1230000,
+      cost_price: 1000000
     },
     {
       id: '11',
       title: 'Facebook Wealth Formular',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/12/465552/1.jpg?2449',
       product_category: ['services', 'products'],
-      price: 3230000
+      price: 3230000,
+      cost_price: 100000
     },
     {
       id: '12',
       title: 'O\'Cash Financial Services Enterprise',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/62/388124/1.jpg?7492',
       product_category: ['services'],
-      price: 130000
+      price: 130000,
+      cost_price: 115000
     },
     {
       id: '13',
       title: 'Catenin95',
-      image: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/302983/1.jpg?7226',
       product_category: ['services', 'products'],
-      price: 1130000
+      price: 1130000,
+      cost_price: 105000
+    },
+    {
+      id: '14',
+      title: 'O\'Cash Financial Services Enterprise',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/143003/1.jpg?3685',
+      product_category: ['services'],
+      price: 230000,
+      cost_price: 215000
+    },
+    {
+      id: '15',
+      title: 'Catenin95',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/95/586842/1.jpg?5445',
+      product_category: ['services', 'products'],
+      price: 440000,
+      cost_price: 402000
+    },
+    {
+      id: '16',
+      title: 'TEGASI Enterprises',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/035411/1.jpg?5075',
+      product_category: ['services', 'products'],
+      price: 405000,
+      cost_price: 401000
+    },
+    {
+      id: '17',
+      title: 'Facebook Wealth Formular',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/35/419492/1.jpg?0721',
+      product_category: ['products'],
+      price: 405000,
+      cost_price: 400000
+    },
+    {
+      id: '18',
+      title: 'O\'Cash Financial Services Enterprise',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/002423/1.jpg?4794',
+      product_category: ['services', 'products'],
+      price: 235000,
+      cost_price: 205000,
+    },
+    {
+      id: '19',
+      title: 'Catenin95',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/92/389122/1.jpg?0567',
+      product_category: ['services'],
+      price: 1230000,
+      cost_price: 103000,
+    },
+    {
+      id: '20',
+      title: 'Facebook Wealth Formular',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/12/465552/1.jpg?2449',
+      product_category: ['services', 'products'],
+      price: 3230000,
+      cost_price: 320000
+    },
+    {
+      id: '21',
+      title: 'O\'Cash Financial Services Enterprise',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/62/388124/1.jpg?7492',
+      product_category: ['services'],
+      price: 130000,
+      cost_price: 100000
+    },
+    {
+      id: '22',
+      title: 'Catenin95',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/302983/1.jpg?7226',
+      product_category: ['services', 'products'],
+      price: 1130000,
+      cost_price: 1104000
     },
 ];
 
@@ -184,9 +270,15 @@ export const menuItems = [
     path: '/favorites',
     icon: 'mdi-heart'
   },
+]
+
+export const carouselItems = [
   {
-    title: 'Checkout',
-    path: '/checkout',
-    icon: 'mdi-credit-card'
-  }
+    src: 'https://ng.jumia.is/cms/Homepage/2019/w46/Thur/JumiaPayBF-2.jpg',
+    path: '',
+  },
+  {
+    src: 'https://ng.jumia.is/cms/2019BF/FS/FS-sat.jpg',
+    path: '',
+  },
 ]

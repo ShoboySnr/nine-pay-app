@@ -15,7 +15,7 @@ export function filterByProductCategory(products, product_category) {
 export function filterByPrice(products, sort_key) {
   if(!sort_key.length ) return products;
   return products.sort((a,b) => {
-    return sort_key === 'high' ? b.price - a.price : a.price - b.price;
+    return sort_key === 'high' ? b.cost_price - a.cost_price : a.cost_price - b.cost_price;
   })
 }
 

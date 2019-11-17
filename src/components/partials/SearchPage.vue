@@ -15,6 +15,7 @@
               v-model="keyword"
               label="Type to search"
               @keyup="filteredByAll($event)"
+              color="success"
             ></v-text-field>
           </v-col>
           <v-col class="d-flex" cols="12" sm="3">
@@ -22,6 +23,7 @@
               :items="sortBy"
               label="Sort By"
               outlined
+              color="success"
               v-model="sortByValue"
               @change="filteredByAll($event)"
             ></v-select>
@@ -31,6 +33,7 @@
               :items="product_category"
               label="Product Category"
               outlined
+              color="success"
               v-model="productCategory"
               @change="filteredByAll($event)"
             ></v-select>
@@ -40,6 +43,7 @@
               :items="orderBy"
               label="Order By"
               outlined
+              color="success"
               @change="filteredByAll($event)"
               v-model="oderByValue"
             ></v-select>

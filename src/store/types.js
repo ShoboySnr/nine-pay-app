@@ -9,3 +9,7 @@ export const  CLEAR_CART = 'CLEAR_CART';
 export const  IS_DATA_READY = 'IS_DATA_READY';
 
 export const  DEDUCT_ITEM_COUNT = 'DEDUCT_ITEM_COUNT';
+
+export const  IS_LOADING = 'IS_LOADING';
+
+export const  ADD_TO_FAV = 'ADD_TO_FAV';
