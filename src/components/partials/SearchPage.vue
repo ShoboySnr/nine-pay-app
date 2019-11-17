@@ -15,33 +15,32 @@
             <v-text-field
               v-model="search"
               label="Type to search"
+              
             ></v-text-field>
           </v-col>
           <v-col class="d-flex" cols="12" sm="3">
             <v-select
               :items="sortBy"
-              :item-value="sortBy"
               label="Sort By"
               outlined
-              v-on:change="getfilteredData"
+              v-model="sortByValue"
             ></v-select>
           </v-col>
           <v-col class="d-flex" cols="12" sm="3">
             <v-select
               :items="product_category"
-              :item-value="product_category"
               label="Product Category"
               outlined
-              v-on:change="getfilteredData"
+              v-model="productCategory"
             ></v-select>
           </v-col> 
           <v-col class="d-flex" cols="12" sm="3">
             <v-select
               :items="orderBy"
-              :item-value="orderBy"
+              :items-value="orderBy"
               label="Order By"
               outlined
-              v-on:change="getfilteredData"
+              v-model="oderByValue"
             ></v-select>
           </v-col>
         </v-row>
@@ -52,6 +51,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'SearchPage',
 
@@ -88,23 +88,34 @@ export default {
       orderBy: [
         {
           text: 'Default',
-          value: ''
+          value: '',
+          type: '',
         },
         {
-          text: 'Ascending',
-          value: 'ASC'
+          text: 'Lowest Price',
+          value: 'sortByLowPrice',
         },
         {
-          text: 'Descending',
-          value: 'DESC'
+          text: 'Highest Price',
+          value: 'sortByHighPrice',
         }
-      ]
+      ],
+      oderByValue: '',
+      search: '',
+      sortByValue: '',
+      productCategory: '',
     }
   },
-  methods: {
-    getfilteredData() {
-      
+  computed: {
+    computedProducts: function () {
+      alert(this.oderByValue);
+      return this.$store.dispatch('computedProducts', {
+        search: this.search, 
+        sortByValue: this.sortByValue, 
+        productCategory: this.productCategory, 
+        oderByValue: this.oderByValue
+      });
     }
-  },
+  }
 };
 </script>

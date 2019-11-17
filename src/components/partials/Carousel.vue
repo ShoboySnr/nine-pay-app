@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container fluid class="fluid">
     <v-carousel
       v-model="model"
       :show-arrows="showArrows"
@@ -14,7 +14,7 @@
       transition="fade-transition"
     ></v-carousel-item>
     </v-carousel>
-  </div>
+  </v-container>
 </template>
 
 <script>

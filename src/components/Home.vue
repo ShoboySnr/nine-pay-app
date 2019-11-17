@@ -26,10 +26,5 @@ export default {
   methods: {
 		...mapActions(['fetchProducts']),
 	},
-  data() {
-    return {
-      products: this.$store.getters('products'),
-    }
-  }
 };
 </script>

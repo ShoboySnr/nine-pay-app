@@ -1,18 +1,22 @@
 import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
-import VueProgressiveImage from './plugins/vue-progressive-image';
 import "vuetify/dist/vuetify.min.css";
+import Notifications from 'vue-notification'
+
 import store from './store'
 
 import router from "./router";
+
+
+Vue.use(Notifications);
 
 Vue.config.productionTip = false
 
 new Vue({
   vuetify,
-  VueProgressiveImage,
   router,
   store,
+  Notifications,
   render: h => h(App)
 }).$mount('#app')

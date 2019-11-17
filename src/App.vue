@@ -20,6 +20,7 @@
             >
             <v-icon> {{item.icon}} </v-icon>
             {{ item.title }}
+            {{ item.title == 'Cart' ? `(${cartsCount})` : '' }}
           </v-btn>
           </v-row>
         </v-container>
@@ -39,17 +40,13 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'App',
 
-  methods: {
-		addToCart(product) {
-			this.$store.commit('addToCart', product)
-			const info = product.name + ' added to cart'
-			this.infos.push(info)
-			setTimeout(() => this.infos.splice(this.infos.indexOf(info), 1), 3000)
-		}
+  computed: {
+    ...mapGetters(['cartsCount'])
   },
   data () {
     return {
@@ -68,6 +65,11 @@ export default {
         title: 'Cart',
         path: '/cart',
         icon: 'mdi-cart'
+      },
+      {
+        title: 'Favorites',
+        path: '/favorites',
+        icon: 'mdi-heart'
       },
       {
         title: 'Checkout',
