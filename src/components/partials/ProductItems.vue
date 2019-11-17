@@ -9,8 +9,9 @@
     </v-row>
     <v-row v-else>
       <v-col
-        cols="6"
+        cols="12"
         md="3"
+        sm="2"
         xs="12"
         v-for="product in products"
         :key="product"

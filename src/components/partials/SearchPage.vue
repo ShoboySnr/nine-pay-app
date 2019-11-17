@@ -54,6 +54,10 @@
 
 export default {
   name: 'SearchPage',
+  oderByValue: '',
+  search: '',
+  sortByValue: '',
+  productCategory: '',
 
   data() {
     return {
@@ -100,10 +104,6 @@ export default {
           value: 'sortByHighPrice',
         }
       ],
-      oderByValue: '',
-      search: '',
-      sortByValue: '',
-      productCategory: '',
     }
   },
   computed: {

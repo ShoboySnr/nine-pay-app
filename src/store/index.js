@@ -5,10 +5,13 @@ import  { GET_ALL_PRODUCTS, ADD_TO_CART, REMOVE_ITEM, CLEAR_CART, IS_DATA_READY,
 
 Vue.use(Vuex);
 
+//get the merchants here
+const allproducts = products;
+
 export default new Vuex.Store({
   state: {
 		cart: [],
-		products: products,
+		products: [],
 		keyword: '',
 		isDataReady: false,
   },
@@ -50,7 +53,7 @@ export default new Vuex.Store({
   },
   actions: {
 		fetchProducts({ commit }) {
-			products.forEach(product => {
+			allproducts.forEach(product => {
 					commit(GET_ALL_PRODUCTS, {
 						title: product.title,
 						image: product.image,
@@ -85,6 +88,7 @@ export default new Vuex.Store({
 		// }
 
 		computedProducts ({state}, {search, productCategory, oderByValue}) {
+			alert(oderByValue);
       return state.products.filter((item) => {
 				return (search.length === 0 || item.name.includes(search)) && 
 				(productCategory.length === 0 || item.product_category.includes(productCategory))
