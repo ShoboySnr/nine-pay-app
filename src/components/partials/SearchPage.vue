@@ -13,9 +13,9 @@
         <v-row align="center">
           <v-col class="d-flex" cols="12" sm="3">
             <v-text-field
-              v-model="search"
+              v-model="keyword"
               label="Type to search"
-              
+              @keyup="filteredByAll($event)"
             ></v-text-field>
           </v-col>
           <v-col class="d-flex" cols="12" sm="3">
@@ -24,6 +24,7 @@
               label="Sort By"
               outlined
               v-model="sortByValue"
+              @change="filteredByAll($event)"
             ></v-select>
           </v-col>
           <v-col class="d-flex" cols="12" sm="3">
@@ -32,14 +33,15 @@
               label="Product Category"
               outlined
               v-model="productCategory"
+              @change="filteredByAll($event)"
             ></v-select>
           </v-col> 
           <v-col class="d-flex" cols="12" sm="3">
             <v-select
               :items="orderBy"
-              :items-value="orderBy"
               label="Order By"
               outlined
+              @change="filteredByAll($event)"
               v-model="oderByValue"
             ></v-select>
           </v-col>
@@ -51,38 +53,41 @@
 </template>
 
 <script>
-
 export default {
   name: 'SearchPage',
-  oderByValue: '',
-  search: '',
-  sortByValue: '',
-  productCategory: '',
 
   data() {
     return {
+      oderByValue: '',
+      keyword: this.$store.state.keyword,
+      sortByValue: '',
+      productCategory: '',
        product_category: [
         {
          text: 'All Merchants',
          value: ''
         }, 
         {
-         text: 'Services Merchants',
+         text: 'Only Services Merchants',
          value: 'services'
        },
        {
-         text: 'Products Merchants',
+         text: 'Only Products Merchants',
          value: 'products'
+       },
+       {
+         text: 'Multiple Merchants',
+         value: 'both'
        },
       ],
       sortBy: [
         {
           text: 'All',
-          value: ''
+          value: '',
         },
         {
           text: 'Merchants Name',
-          value: 'name'
+          value: 'title',
         },
         {
           text: 'Merchants Type',
@@ -93,28 +98,28 @@ export default {
         {
           text: 'Default',
           value: '',
-          type: '',
         },
         {
-          text: 'Lowest Price',
-          value: 'sortByLowPrice',
+          text: 'Lowest to Highest Price',
+          value: 'low',
         },
         {
-          text: 'Highest Price',
-          value: 'sortByHighPrice',
+          text: 'Highest to Lowest Price',
+          value: 'high',
         }
       ],
     }
   },
+  
   computed: {
-    computedProducts: function () {
-      alert(this.oderByValue);
-      return this.$store.dispatch('computedProducts', {
-        search: this.search, 
-        sortByValue: this.sortByValue, 
-        productCategory: this.productCategory, 
+    filteredByAll() {
+      return this.$store.dispatch('filteredByAll', {
+        keyword: this.keyword,
+        sortByValue: this.sortByValue,
+        productCategory: this.productCategory,
         oderByValue: this.oderByValue
-      });
+      })
+      // return filterByTitle(this.$store.state.products, this.keyword)
     }
   }
 };

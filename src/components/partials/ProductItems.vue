@@ -11,8 +11,7 @@
       <v-col
         cols="12"
         md="3"
-        sm="2"
-        xs="12"
+        sm="4"
         v-for="product in products"
         :key="product"
         class="product"

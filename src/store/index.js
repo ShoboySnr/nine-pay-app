@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import { products } from '../data/data';
 import  { GET_ALL_PRODUCTS, ADD_TO_CART, REMOVE_ITEM, CLEAR_CART, IS_DATA_READY, DEDUCT_ITEM_COUNT } from './types';
+import { filterByTitle, filterByProductCategory, filterByPrice, filterByAlphabetically } from '../filters/searchfilter';
 
 Vue.use(Vuex);
 
@@ -61,7 +62,7 @@ export default new Vuex.Store({
 						product_category: product.product_category,
 						price: product.price,
 					});
-					commit(IS_DATA_READY, true)
+					commit(IS_DATA_READY, true);
 			});
 		},
 
@@ -70,17 +71,57 @@ export default new Vuex.Store({
 			commit(ADD_TO_CART, { product: product, itemIndex: itemIndex } );
 		},
 
-		// sortByLowPrice({state}) {
+		sortByLowPrice({state}) {
+			return state.products.sort(function(a, b) {
+				return a.price - b.price;
+			});
+		},
+
+		sortByHighPrice({state}) {
+			return state.products.sort(function(a, b) {
+				return b.price - a.price;
+			});
+		},
+
+		sortByDefault({state}) {
+			return state.products;
+		},
+		// sortByProductCategory({state}, {productCategory}) {
+		
+		// },
+
+		// sortByMerchantTitle({state}) {
 		// 	return state.products.sort(function(a, b) {
-		// 		return a.price - b.price;
+		// 		if (a.title > b.title) { return 1}
+		// 		if (a.title < b.title) { return -1 }
+		// 		return 0
 		// 	});
 		// },
 
-		// sortByHighPrice({state}) {
-		// 	return state.products.sort(function(a, b) {
-		// 		return b.price - a.price;
-		// 	});
-		// },
+		sortByMerchantType({state}) {
+			return state.products.sort(function(a, b) {
+				if (a.product_category[0] > b.product_category[0]) { return 1}
+				if (a.product_category[0] < b.product_category[0]) { return -1 }
+				return 0
+			});
+		},
+
+		filteredByAll: ({commit, state}, payload)  => {
+			const obj = filterByAlphabetically(filterByPrice(filterByProductCategory(filterByTitle(allproducts, payload.keyword), payload.productCategory), payload.oderByValue), payload.sortByValue);
+			state.products = []
+			obj.forEach(product => {
+				commit(GET_ALL_PRODUCTS, {
+					title: product.title,
+					image: product.image,
+					id: product.id,
+					product_category: product.product_category,
+					price: product.price,
+				});
+				commit(IS_DATA_READY, true);
+		});
+		},
+	
+		
 
 		// sortByMerchantCategory({state}, payload) {
 		// 	const merchantIndex = state.cart.find(item => item.product_category === payload);
@@ -132,7 +173,13 @@ export default new Vuex.Store({
 		},
 		getCart: state => {
 			return state.cart;
-		}
+		},
+		products: state => {
+			return state.products;
+		},
+		filteredByAll: state => {
+			return filterByTitle (state.products, state.keyword)
+		},
 		
 	}
 })
