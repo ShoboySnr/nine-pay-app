@@ -4,7 +4,7 @@
     <v-row v-if="products.length  === 0">
       <v-col cols="12" class="d-flex justify-center" height="40">
         <p class="red--text display-1"><v-icon x-large class="red--text">mdi-delete-empty</v-icon>
-        No Merchants Found</p>
+        Sorry, we couldn't load any merchants.</p>
       </v-col>
     </v-row>
     <v-row v-else>
