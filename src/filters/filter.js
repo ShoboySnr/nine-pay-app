@@ -12,11 +12,6 @@ Vue.filter('returnPrice', function(value) {
   return `₦${val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`
 });
 
-Vue.filter('readMore', function(value) {
-  if (value.length <= 28) return value;
-  return `${value.substr(0, 28)}...`;
-});
-
 Vue.filter('toPercentage', function(first_value, second_value) {
   return `${(((second_value - first_value) / second_value) * 100).toFixed(0)}%`;
 })

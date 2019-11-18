@@ -34,7 +34,7 @@ export const products = [
     },
     {
       id: '5',
-      title: 'O\'Cash Financial Services Enterprise',
+      title: 'Tazion World',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/143003/1.jpg?3685',
       product_category: ['services'],
       price: 230000,
@@ -42,7 +42,7 @@ export const products = [
     },
     {
       id: '6',
-      title: 'Catenin95',
+      title: 'DEWISE ICT STORE',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/95/586842/1.jpg?5445',
       product_category: ['services', 'products'],
       price: 440000,
@@ -50,7 +50,7 @@ export const products = [
     },
     {
       id: '7',
-      title: 'TEGASI Enterprises',
+      title: 'Rashers Orison Integrated Farms Limited',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/035411/1.jpg?5075',
       product_category: ['services', 'products'],
       price: 405000,
@@ -58,7 +58,7 @@ export const products = [
     },
     {
       id: '8',
-      title: 'Facebook Wealth Formular',
+      title: 'Crestrade Limited',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/35/419492/1.jpg?0721',
       product_category: ['products'],
       price: 405000,
@@ -66,7 +66,7 @@ export const products = [
     },
     {
       id: '9',
-      title: 'O\'Cash Financial Services Enterprise',
+      title: 'Yele Mega Concepts',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/002423/1.jpg?4794',
       product_category: ['services', 'products'],
       price: 235000,
@@ -74,7 +74,7 @@ export const products = [
     },
     {
       id: '10',
-      title: 'Catenin95',
+      title: 'Blueskye Energy Services Limited',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/92/389122/1.jpg?0567',
       product_category: ['services'],
       price: 1230000,
@@ -82,7 +82,7 @@ export const products = [
     },
     {
       id: '11',
-      title: 'Facebook Wealth Formular',
+      title: 'Socliq Interactive',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/12/465552/1.jpg?2449',
       product_category: ['services', 'products'],
       price: 3230000,
@@ -90,7 +90,7 @@ export const products = [
     },
     {
       id: '12',
-      title: 'O\'Cash Financial Services Enterprise',
+      title: 'Dosh Venture Technology',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/62/388124/1.jpg?7492',
       product_category: ['services'],
       price: 130000,
@@ -98,7 +98,7 @@ export const products = [
     },
     {
       id: '13',
-      title: 'Catenin95',
+      title: 'Ekwurekwu Communications',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/302983/1.jpg?7226',
       product_category: ['services', 'products'],
       price: 1130000,
@@ -106,7 +106,7 @@ export const products = [
     },
     {
       id: '14',
-      title: 'O\'Cash Financial Services Enterprise',
+      title: 'Runo&Associates',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/143003/1.jpg?3685',
       product_category: ['services'],
       price: 230000,
@@ -114,7 +114,7 @@ export const products = [
     },
     {
       id: '15',
-      title: 'Catenin95',
+      title: 'Easy Data World',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/95/586842/1.jpg?5445',
       product_category: ['services', 'products'],
       price: 440000,
@@ -122,7 +122,7 @@ export const products = [
     },
     {
       id: '16',
-      title: 'TEGASI Enterprises',
+      title: 'Bluecross Solution',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/035411/1.jpg?5075',
       product_category: ['services', 'products'],
       price: 405000,
@@ -130,7 +130,7 @@ export const products = [
     },
     {
       id: '17',
-      title: 'Facebook Wealth Formular',
+      title: 'Imperial Concepts',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/35/419492/1.jpg?0721',
       product_category: ['products'],
       price: 405000,
@@ -138,7 +138,7 @@ export const products = [
     },
     {
       id: '18',
-      title: 'O\'Cash Financial Services Enterprise',
+      title: 'E-city',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/002423/1.jpg?4794',
       product_category: ['services', 'products'],
       price: 235000,
@@ -146,7 +146,7 @@ export const products = [
     },
     {
       id: '19',
-      title: 'Catenin95',
+      title: 'KAKASMALL Inc',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/92/389122/1.jpg?0567',
       product_category: ['services'],
       price: 1230000,
@@ -154,7 +154,7 @@ export const products = [
     },
     {
       id: '20',
-      title: 'Facebook Wealth Formular',
+      title: 'Zion',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/12/465552/1.jpg?2449',
       product_category: ['services', 'products'],
       price: 3230000,
@@ -162,7 +162,7 @@ export const products = [
     },
     {
       id: '21',
-      title: 'O\'Cash Financial Services Enterprise',
+      title: 'Sophisticated Technologies',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/62/388124/1.jpg?7492',
       product_category: ['services'],
       price: 130000,
@@ -170,11 +170,67 @@ export const products = [
     },
     {
       id: '22',
-      title: 'Catenin95',
+      title: 'Excel Decor',
       image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/302983/1.jpg?7226',
       product_category: ['services', 'products'],
       price: 1130000,
       cost_price: 1104000
+    },
+    {
+      id: '23',
+      title: 'Thewardrope_21',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/302983/1.jpg?7226',
+      product_category: ['services', 'products'],
+      price: 1130000,
+      cost_price: 105000
+    },
+    {
+      id: '24',
+      title: 'NAIJAFOOTSTORE',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/143003/1.jpg?3685',
+      product_category: ['services'],
+      price: 230000,
+      cost_price: 215000
+    },
+    {
+      id: '25',
+      title: 'The Gift Managers',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/95/586842/1.jpg?5445',
+      product_category: ['services', 'products'],
+      price: 440000,
+      cost_price: 402000
+    },
+    {
+      id: '26',
+      title: 'Incrivel Investment Limited',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/035411/1.jpg?5075',
+      product_category: ['services', 'products'],
+      price: 405000,
+      cost_price: 401000
+    },
+    {
+      id: '27',
+      title: 'Zaradise Scents [Perfume Store]',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/143003/1.jpg?3685',
+      product_category: ['services'],
+      price: 230000,
+      cost_price: 215000
+    },
+    {
+      id: '28',
+      title: 'Funmi & Flowers Events',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/95/586842/1.jpg?5445',
+      product_category: ['services', 'products'],
+      price: 440000,
+      cost_price: 402000
+    },
+    {
+      id: '29',
+      title: 'Souzou Technology',
+      image: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/035411/1.jpg?5075',
+      product_category: ['services', 'products'],
+      price: 405000,
+      cost_price: 401000
     },
 ];
 

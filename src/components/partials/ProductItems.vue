@@ -10,7 +10,11 @@
     </v-row>
     <v-row v-else-if="isLoading">
       <v-col cols="12" class="d-flex justify-center">
-        <i class="green--text display-1"><v-icon class="=green--text">mdi-loading</v-icon>
+        <i class="green--text display-1">
+           <v-progress-circular
+              indeterminate
+              color="success"
+            ></v-progress-circular>
         loading...</i>
       </v-col>
     </v-row>
@@ -43,8 +47,8 @@
                 height="200px"
                 :src="product.image"
               ></v-img>
-                <v-card-text class="text--primary pa-20">
-                  <div class="font-weight-bold max-product-width">{{product.title | readMore }}</div>
+                <v-card-text class="text--primary pa-20 text-center">
+                  <div class="font-weight-bold max-product-width">{{product.title }}</div>
                 </v-card-text>
                 <v-card-subtext class="text-center d-flex justify-center pt-0 pa-1 caption">
                     <span v-for="(merchant, index) in product.product_category" :key="index" :class="`${tags[merchant]} white--text pl-1 pr-1`">

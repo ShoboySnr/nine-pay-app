@@ -97,8 +97,8 @@ export default new Vuex.Store({
 						price: product.price,
 						cost_price: product.cost_price,
 					});
+				commit(IS_LOADING, false);
 			});
-			commit(IS_LOADING, false);
 		},
 
 		addToCart({ commit, state }, product) {
@@ -124,8 +124,8 @@ export default new Vuex.Store({
 					price: product.price,
 					cost_price: product.cost_price,
 				});
+				commit(IS_LOADING, false);
 			});
-			commit(IS_LOADING, false);
 		},
 	},
 
