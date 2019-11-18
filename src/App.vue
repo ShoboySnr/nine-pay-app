@@ -1,14 +1,11 @@
 <template>
   <v-app>
-    <div>
-      <v-app-bar
-          color="success accent-4"
-          light
-          height="80px"
-          fixed
-        >
-        <v-container class="d-flex pe-2 mt-15 mb-15">
-          <v-toolbar  color="success" dark flat class="white-text" app>
+    <div id="app">
+          <v-toolbar  color="success" dark flat class="white-text fixed" app height="100px"  clipped-left>
+            <v-toolbar-side-icon  @click.stop="drawer = !drawer" class="hidden-md-and-up hamburger white-text">
+              <v-icon class="pr-2" x-large> mdi-menu </v-icon>
+            </v-toolbar-side-icon>
+            <v-container class="d-flex">
             <v-toolbar-title>
               <v-link to="/" light flat class="logo">
                 {{ title }}
@@ -30,24 +27,33 @@
               {{ item.title == 'Favorites' ? `(${favsCount})` : '' }}
             </v-btn>
             </v-toolbar-items>
-            <v-menu class="hidden-md-and-up">
-                <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
-                  <v-list>
-                    <v-btn
-                      v-for="item in menuItems"
-                      :key="item.icon"
-                      :to="item.path"
-                      class="text-capitalize"
-                      flat
-                    >
-                    <v-icon> {{item.icon}} </v-icon>
-                      {{ item.title }}
-                    </v-btn>  
-                  </v-list>
-            </v-menu>
-          </v-toolbar>
         </v-container>
-        </v-app-bar>
+          </v-toolbar>
+          <v-navigation-drawer
+            v-model="drawer"
+            temporary
+            absolute
+            width = "200"
+            id = "drawer"
+            class="pt-10 pb-10"
+          >
+            <v-link to="/" light flat class="logo black-text ml-3 text-center">
+                {{ title }}
+            </v-link>
+           <v-list>
+              <v-btn
+                v-for="item in menuItems"
+                :key="item.icon"
+                :to="item.path"
+                class="text-capitalize black-text mt-3 mb-3 headline"
+                flat
+                text
+              >
+              <v-icon class="pr-2"> {{item.icon}} </v-icon>
+                {{ item.title }}
+              </v-btn>  
+            </v-list>
+          </v-navigation-drawer>
     </div>
 
     <v-content>
@@ -89,6 +95,22 @@
 body {
   font-family: Brown;
 }
+
+#drawer{
+  background: #ffffff;
+}
+.hamburger {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+}
 </style>
 
 <script>
@@ -107,7 +129,8 @@ export default {
       fixed: false,
       menuItems,
       footerItems,
-      title: '9Pay'
+      title: '9Pay',
+      drawer: null 
     }
   },
 };

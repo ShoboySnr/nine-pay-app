@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="pa-0">
+  <v-container fluid class="pa-0 carousel-top">
     <v-carousel
       v-model="model"
       :show-arrows="showArrows"
@@ -10,7 +10,6 @@
       v-for="(item,index) in carouselItems"
       :key="index"
       :src="item.src"
-      transition="slide-x-reverse-transition"
       :href="item.path"
     >
       <v-row
@@ -25,6 +24,11 @@
     </v-carousel>
   </v-container>
 </template>
+<style scoped>
+.carousel-top {
+  margin-top: 100px;
+}
+</style>
 
 <script>
 import { carouselItems } from '../../data/data'
